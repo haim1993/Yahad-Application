@@ -1,40 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="80dp">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/business_list_icon"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_margin="12dp"
-        android:src="@android:drawable/alert_dark_frame" />
 
     <TextView
-        android:id="@+id/business_list_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/business_list_icon"
-        android:text="Name of business"
-        android:textSize="24sp" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Business Name"
+        android:id="@+id/item_name"
+        android:layout_marginTop="27dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/item_icon"
+        android:layout_toEndOf="@+id/item_icon" />
 
     <TextView
-        android:id="@+id/business_list_distance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_toRightOf="@id/business_list_name"
-        android:text="1 km" />
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="100 KM"
+        android:id="@+id/item_distance"
+        android:layout_below="@+id/item_name"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="33dp"
+        android:layout_marginEnd="33dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="16dp"
-        android:layout_toRightOf="@id/business_list_distance"
-        android:src="@drawable/ic_keyboard_arrow_right_black_24dp" />
+        android:id="@+id/item_icon"
+        android:src="@drawable/mcdonalds"
+        android:adjustViewBounds="true"
+        android:maxHeight="80dp"
+        android:maxWidth="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:padding="15dp" />
 
 </RelativeLayout>
